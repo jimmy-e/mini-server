@@ -36,7 +36,6 @@ const passportSessionMiddleware = passport.session();
 
 const expressMiddleware = express();
 const expressSessionMiddleware = session({
-  cookie: { secure: true },
   genid: (request) => uuid(),
   resave: false,
   saveUninitialized: false,
