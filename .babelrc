@@ -1,0 +1,29 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "targets": { "node": "current" }
+      }
+    ],
+    "@babel/preset-typescript"
+  ],
+  "plugins": [
+    ["babel-plugin-transform-builtin-extend", {
+      "globals": ["Error", "Array"],
+      "approximate": true
+    }],
+    ["module-resolver", {
+      "root": ["./src"],
+      "alias": {
+        "middleware": "./src/middleware/",
+        "schema": "./src/schema/",
+        "server": "./src/server/",
+        "serverError": "./src/serverError/",
+        "types": "./src/types/",
+        "utils": "./src/utils/",
+        "youtube": "./src/thirdParty/youtube/"
+      }
+    }]
+  ]
+}

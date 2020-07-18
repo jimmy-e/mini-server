@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "baseUrl": ".",
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "noImplicitAny": false,
+    "outDir": "dist",
+    "resolveJsonModule": true,
+    "sourceMap": true,
+    "target": "esnext",
+    "paths": {
+      "middleware/*": ["src/middleware/*"],
+      "schema/*": ["src/schema/*"],
+      "server/*": ["src/server/*"],
+      "serverError/*": ["src/serverError/*"],
+      "types/*": ["src/types/*"],
+      "utils/*": ["src/utils/*"],
+      "youtube/*": ["src/thirdParty/youtube/*"]
+    }
+  },
+  "exclude": [ "node_modules" ],
+  "include": [ "**/*.ts", "**/*.js" ]
+}
