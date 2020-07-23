@@ -41,7 +41,7 @@ const expressSessionMiddleware = session({
   saveUninitialized: false,
   secret: 'sample_session_secret',
   cookie: {
-    sameSite: 'none',
+    secure: true,
   }
 });
 
