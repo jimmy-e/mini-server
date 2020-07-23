@@ -40,6 +40,9 @@ const expressSessionMiddleware = session({
   resave: false,
   saveUninitialized: false,
   secret: 'sample_session_secret',
+  cookie: {
+    sameSite: 'strict',
+  }
 });
 
 expressMiddleware.use(cors({
